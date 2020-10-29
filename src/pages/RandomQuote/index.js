@@ -16,7 +16,7 @@ const RandomQuote = () => {
 
   return (
     <Container>
-      <Quote quote={quoteData.quoteText} quoteId={quoteData._id} />
+      <Quote quote={quoteData.quoteText} quoteId={quoteData._id} quoteAuthor={quoteData.quoteAuthor} />
 
       <Link to={`/author/${quoteData.quoteAuthor}`} className="person-block">
         <div>

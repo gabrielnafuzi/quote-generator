@@ -4,7 +4,7 @@ import ReactTooltip from 'react-tooltip';
 
 import { Container } from './styles';
 
-const Quote = ({ quote, quoteId }) => {
+const Quote = ({ quote, quoteId, quoteAuthor }) => {
   const [isCopied, setIsCopied] = React.useState(false);
 
   return (
@@ -14,7 +14,7 @@ const Quote = ({ quote, quoteId }) => {
       onClick={() => setIsCopied(true)}
       onMouseLeave={() => setIsCopied(false)}
     >
-      <Clipboard data-clipboard-text={quote}>
+      <Clipboard data-clipboard-text={`“${quote}”, ${quoteAuthor}`}>
         <blockquote>
           <p>“{quote}”</p>
         </blockquote>
