@@ -13,7 +13,7 @@ const Header = () => {
     navigate('/');
 
     const response = await fetch(
-      'https://quote-garden.herokuapp.com/api/v2/quotes/random'
+      'https://quote-garden.herokuapp.com/api/v3/quotes/random'
     );
 
     const json = await response.json();
