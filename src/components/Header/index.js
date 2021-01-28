@@ -18,7 +18,7 @@ const Header = () => {
 
     const json = await response.json();
 
-    setQuoteData(json.quote);
+    setQuoteData(json.data);
   }, [navigate, setQuoteData]);
 
   React.useEffect(() => {
