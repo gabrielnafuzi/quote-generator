@@ -1,36 +1,28 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react'
+import { useParams } from 'react-router-dom'
 
-import Quote from '../../components/Quote';
-import Loading from '../../components/Loading';
+import Quote from '../../components/Quote'
+import Loading from '../../components/Loading'
 
-import { Container, AuthorNameBlock } from './styles';
+import { Container, AuthorNameBlock } from './styles'
 
 const PersonQuotes = () => {
-  const { name } = useParams();
-  const [uniqueQuotes, setUniqueQuotes] = React.useState([]);
+  const { name } = useParams()
+  const [authorQuotes, setAuthorQuotes] = React.useState([])
 
   React.useEffect(() => {
-    (async () => {
+    ;(async () => {
       const response = await fetch(
-        `https://quote-garden.herokuapp.com/api/v2/authors/${name}`
-      );
+        `https://quote-garden.herokuapp.com/api/v3/quotes?author=${name}`
+      )
 
-      const json = await response.json();
+      const json = await response.json()
+      setAuthorQuotes(json.data)
+    })()
+  }, [name])
 
-      setUniqueQuotes(
-        Object.values(
-          json.quotes.reduce(
-            (acc, cur) => Object.assign(acc, { [cur.quoteText]: cur }),
-            {}
-          )
-        )
-      );
-    })();
-  }, [name]);
-
-  if (!uniqueQuotes.length) {
-    return <Loading />;
+  if (!authorQuotes.length) {
+    return <Loading />
   }
 
   return (
@@ -39,11 +31,11 @@ const PersonQuotes = () => {
         <h1>{name}</h1>
       </AuthorNameBlock>
 
-      {uniqueQuotes.map(quote => (
+      {authorQuotes.map(quote => (
         <Quote key={quote._id} quote={quote.quoteText} quoteId={quote._id} />
       ))}
     </Container>
-  );
-};
+  )
+}
 
-export default PersonQuotes;
+export default PersonQuotes

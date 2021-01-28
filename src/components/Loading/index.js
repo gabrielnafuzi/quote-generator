@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { Container, Loader } from './styles';
+import { Container, Loader } from './styles'
 
 const Loading = () => {
   return (
     <Container>
       <Loader />
     </Container>
-  );
-};
+  )
+}
 
-export default Loading;
+export default Loading

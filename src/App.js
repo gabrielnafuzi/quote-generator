@@ -1,12 +1,12 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import RandomQuote from './pages/RandomQuote';
-import PersonQuotes from './pages/PersonQuotes';
-import Header from './components/Header';
-import { QuoteStorage } from './QuoteContext';
+import RandomQuote from './pages/RandomQuote'
+import PersonQuotes from './pages/PersonQuotes'
+import Header from './components/Header'
+import { QuoteStorage } from './QuoteContext'
 
-import GlobalStyles from './styles/GlobalStyles';
+import GlobalStyles from './styles/GlobalStyles'
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
         <GlobalStyles />
       </QuoteStorage>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App

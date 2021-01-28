@@ -1,11 +1,11 @@
-import React from 'react';
-import Clipboard from 'react-clipboard.js';
-import ReactTooltip from 'react-tooltip';
+import React from 'react'
+import Clipboard from 'react-clipboard.js'
+import ReactTooltip from 'react-tooltip'
 
-import { Container } from './styles';
+import { Container } from './styles'
 
 const Quote = ({ quote, quoteId, quoteAuthor }) => {
-  const [isCopied, setIsCopied] = React.useState(false);
+  const [isCopied, setIsCopied] = React.useState(false)
 
   return (
     <Container
@@ -28,7 +28,7 @@ const Quote = ({ quote, quoteId, quoteAuthor }) => {
         getContent={() => (isCopied ? 'Copied!' : 'Click to copy')}
       />
     </Container>
-  );
-};
+  )
+}
 
-export default Quote;
+export default Quote

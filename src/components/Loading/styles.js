@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   height: 80vh;
   margin: 0 auto;
-`;
+`
 
 export const Loader = styled.div`
   width: 5rem;
@@ -27,4 +27,4 @@ export const Loader = styled.div`
       transform: rotate(360deg);
     }
   }
-`;
+`

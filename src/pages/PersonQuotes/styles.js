@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const Container = styled.div`
       transform: initial;
     }
   }
-`;
+`
 
 export const AuthorNameBlock = styled.div`
   width: 100%;
@@ -44,4 +44,4 @@ export const AuthorNameBlock = styled.div`
       line-height: 3.4rem;
     }
   }
-`;
+`
