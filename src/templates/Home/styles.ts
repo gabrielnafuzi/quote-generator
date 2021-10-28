@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { ArrowRightAlt } from '@material-ui/icons'
 
 export const Container = styled.div`
   display: flex;
@@ -79,5 +78,3 @@ export const Container = styled.div`
 `
 
 export const PersonDetailsBlock = styled.div``
-
-export const ArrowRightIcon = styled(ArrowRightAlt)``

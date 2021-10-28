@@ -2,40 +2,44 @@
   "name": "quote-generator",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --max-warnings=0"
+  },
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "history": "^5.0.0",
-    "react": "^16.14.0",
+    "axios": "^0.24.0",
+    "next": "11.0.0",
+    "next-seo": "^4.28.1",
+    "nextjs-progressbar": "^0.0.11",
+    "react": "17.0.2",
     "react-clipboard.js": "^2.0.16",
-    "react-dom": "^16.14.0",
-    "react-router-dom": "^6.0.0-beta.0",
-    "react-scripts": "3.4.3",
+    "react-dom": "17.0.2",
+    "react-icons": "^4.3.1",
     "react-tooltip": "^4.2.10",
     "styled-components": "^5.2.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@babel/runtime": "^7.15.4",
+    "@next/eslint-plugin-next": "^12.0.1",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/styled-components": "^5.1.15",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "babel-plugin-styled-components": "^1.13.3",
+    "eslint": "^8.1.0",
+    "eslint-config-next": "^12.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import-helpers": "^1.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
   }
 }

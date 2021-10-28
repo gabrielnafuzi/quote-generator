@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export default createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   :root {
     font-size: 62.5%;
   }
@@ -12,7 +12,7 @@ export default createGlobalStyle`
     outline: none;
   }
 
-  html { 
+  html {
     min-height: 100%;
     background: #fff;
   }

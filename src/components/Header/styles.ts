@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Autorenew } from '@material-ui/icons'
 
 export const Container = styled.header`
   padding: 3.2rem 3.2rem 0;
@@ -43,5 +42,3 @@ export const Container = styled.header`
     }
   }
 `
-
-export const ReloadIcon = styled(Autorenew)``
