@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
+
 import { GetServerSideProps } from 'next'
+import { NextSeo } from 'next-seo'
 
 import { SingleQuote, useQuote } from '@/hooks'
 import { api } from '@/services'
 import { Home } from '@/templates'
-import { NextSeo } from 'next-seo'
 
 type IndexProps = {
   quote: SingleQuote
@@ -15,7 +16,7 @@ const Index = ({ quote }: IndexProps) => {
 
   useEffect(() => {
     setQuote(quote)
-  }, [])
+  }, [quote, setQuote])
 
   return (
     <>
