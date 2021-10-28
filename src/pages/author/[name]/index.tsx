@@ -1,17 +1,11 @@
 import { GetServerSideProps } from 'next'
 import { NextSeo } from 'next-seo'
 
-import { Quote } from '@/components'
 import { SingleQuote } from '@/hooks'
 import { api } from '@/services'
+import { AuthorQuotes, AuthorQuotesProps } from '@/templates/'
 
-import * as S from './styles'
-
-type AuthorQuotesProps = {
-  quotes: SingleQuote[]
-}
-
-const AuthorQuotes = ({ quotes }: AuthorQuotesProps) => (
+const AuthorQuotesPage = ({ quotes }: AuthorQuotesProps) => (
   <>
     <NextSeo
       title={`${quotes?.[0]?.quoteAuthor}'s quotes - Quote generator`}
@@ -25,15 +19,7 @@ const AuthorQuotes = ({ quotes }: AuthorQuotesProps) => (
       }}
     />
 
-    <S.Container>
-      <S.AuthorNameBlock>
-        <h1>{quotes?.[0]?.quoteAuthor}</h1>
-      </S.AuthorNameBlock>
-
-      {quotes.map((quote) => (
-        <Quote key={quote._id} quote={quote} />
-      ))}
-    </S.Container>
+    <AuthorQuotes quotes={quotes} />
   </>
 )
 
@@ -60,4 +46,4 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 }
 
-export default AuthorQuotes
+export default AuthorQuotesPage
