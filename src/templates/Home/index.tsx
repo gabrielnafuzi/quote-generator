@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { MdArrowRightAlt } from 'react-icons/md'
 
-import { Quote, Loading } from '@/components'
+import { Loading, Quote } from '@/components'
 import { useQuote } from '@/hooks'
 
 import * as S from './styles'
