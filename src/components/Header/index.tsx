@@ -15,7 +15,9 @@ export const Header = () => {
   const handleFetchQuote = useCallback(async () => {
     await getRandomQuote()
 
-    router.push('/')
+    if (router.pathname !== '/') {
+      router.push('/')
+    }
   }, [getRandomQuote, router])
 
   return (

@@ -1,4 +1,10 @@
-import { useState, createContext, useContext, ReactNode } from 'react'
+import {
+  useState,
+  createContext,
+  useContext,
+  ReactNode,
+  useCallback
+} from 'react'
 
 import { api } from '@/services'
 
@@ -24,17 +30,17 @@ export const QuoteContext = createContext({} as QuoteContextData)
 const QuoteProvider = ({ children }: QuoteProviderProps) => {
   const [quote, setQuote] = useState<SingleQuote | null>(null)
 
-  const getRandomQuote = async () => {
+  const getRandomQuote = useCallback(async () => {
     setQuote(null)
 
     const { data } = await api.get<{ data: SingleQuote[] }>('/random')
 
     setQuote(data.data[0])
-  }
+  }, [])
 
-  const handleSetQuote = (quote: SingleQuote) => {
+  const handleSetQuote = useCallback((quote: SingleQuote) => {
     setQuote(quote)
-  }
+  }, [])
 
   return (
     <QuoteContext.Provider
