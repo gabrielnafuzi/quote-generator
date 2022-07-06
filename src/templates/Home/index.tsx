@@ -14,17 +14,19 @@ export const Home = () => {
 
   return (
     <S.Container>
-      <Quote quote={quote} />
+      <S.QuoteWrapper>
+        <Quote quote={quote} />
+      </S.QuoteWrapper>
 
       <Link href={`/author/${quote.quoteAuthor}`} passHref>
-        <div className="person-block">
+        <S.QuoteInfoWrapper>
           <div>
-            <h1>{quote.quoteAuthor}</h1>
-            <span>{quote.quoteGenre}</span>
+            <S.QuoteAuthor>{quote.quoteAuthor}</S.QuoteAuthor>
+            <S.QuoteGenre>{quote.quoteGenre}</S.QuoteGenre>
           </div>
 
           <MdArrowRightAlt />
-        </div>
+        </S.QuoteInfoWrapper>
       </Link>
     </S.Container>
   )
